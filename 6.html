@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+color: #333;
+text-align: center;
+margin: 0;
+padding: 0;
+}
+h1 {
+margin-top: 50px;
+color: #2c3e50;
+}
+.calculator {
+background-color: #ffffff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+display: inline-block;
+margin-top: 30px;
+}
+input[type="number"] {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 18px;
+}
+.buttons {
+margin: 10px 0;
+}
+button {
+background-color: #3498db;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+margin: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+button:hover {
+background-color: #2980b9;
+}
+.result {
+margin-top: 20px;
+font-size: 20px;
+font-weight: bold;
+color: #e74c3c;
+}
+</style>
+</head>
+<body>
+<h1>Simple Calculator</h1>
+<div class="calculator">
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number"> 
+<div class="buttons">
+<button onclick="performOperation('sum')">Sum</button>
+<button onclick="performOperation('product')">Product</button>
+<button onclick="performOperation('difference')">Difference</button>
+<button onclick="performOperation('remainder')">Remainder</button>
+<button onclick="performOperation('quotient')">Quotient</button>
+<button onclick="performOperation('power')">Power</button>
+<button onclick="performOperation('squareRoot')">Square Root</button>
+<button onclick="performOperation('square')">Square</button>
+</div>
+<div class="result" id="result"></div>
+</div>
+<script>
+function performOperation(operation) {
+let num1 = parseFloat(document.getElementById('num1').value);
+let num2 = parseFloat(document.getElementById('num2').value);
+let result;
+switch (operation) {
+case 'sum':
+result = num1 + num2;
+break;
+case 'product':
+result = num1 * num2;
+break;
+case 'difference':
+result = num1 - num2;
+break;
+case 'remainder':
+result = num1 % num2;
+break;
+case 'quotient':
+result = num1 / num2;
+break;
+case 'power':
+result = Math.pow(num1, num2);
+break;
+case 'squareRoot':
+result = Math.sqrt(num1);
+break;
+case 'square':
+result = Math.pow(num1, 2);
+break;
+default:
+result = 'Invalid Operation';
+}
+document.getElementById('result').textContent = 'Result: ' + result;
+}
+</script>
+</body>
+</html>
