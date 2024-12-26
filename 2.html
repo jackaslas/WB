@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Timetable</title>
+<style>
+table {
+width: 100%;
+border-collapse: collapse;
+}
+th, td {
+border: 1px solid black;
+padding: 10px;
+text-align: center;
+}
+th {
+background-color: #4CAF50;
+color: white;
+}
+.lab {
+background-color: #f4c2c2;
+}
+.elective {
+background-color: #d4e157;
+}
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+background-color: #e0f7fa;
+}
+tfoot {
+background-color: #4CAF50;
+color: rgb(27, 22, 22);
+}
+.lab{
+background-color: rgb(231, 153, 153);
+}
+.Lun{
+background-color: red;
+}
+.Br{
+background-color: blue;
+}
+</style>
+</head>
+<body>
+<h1>Class Time Table</h1>
+<!-- Time Table -->
+<table>
+<!-- Table Header -->
+<thead>
+<tr>
+<th>Day</th>
+<th>9:30 - 10:30</th>
+<th>10:30 - 11:30</th>
+<th>11.30 - 11.45</th>
+<th>11:45 - 12:45</th>
+<th>12:45 - 1:30</th>
+<th>1:30 - 2:15</th>
+<th>2:15 - 3:15</th>
+<th>3:15 - 4:15</th>
+</tr>
+</thead>
+<!-- Table Body -->
+<tbody>
+<tr>
+<td>Monday</td>
+<td>AI</td>
+<td>SEPM</td>
+<td class="Br">Break</td>
+<td colspan="2" class="lab">cnlab_b1/weblab_b2</td>
+<td class="Lun">Lunch</td>
+<td>EVS</td>
+<td>SEC</td>
+</tr>
+<tr>
+<td>Tuesday</td>
+<td>CN</tdclass=>
+<td>RM</td>
+<td class="Br">Break</td>
+<td>AI</td>
+<td>EVS</td>
+<td class="Lun">Lunch</td>
+<td>TOC</td>
+<td>SEC</td>          
+</tr>
+<tr>
+<td>Wednesday</td>
+<td>RM</td>
+<td>TOC</td>
+<td class="Br">Break</td>
+<td>CN</td>
+<td>SEPM</td>
+<td class="Lun">Lunch</td>
+<td>PE</td>
+<td>SEC</td>  
+</tr>
+<tr>
+<td>Thursday</td>
+<td>SEPM</td>
+<td>AI</td>
+<td class="Br">Break</td>
+<td colspan="2" class="lab">cnlab_b2/weblab_b3</td>
+<td class="Lun">Lunch</td>
+<td>RM</td>
+<td>SEC</td>            
+</tr>
+<tr>
+<td>Friday</td>
+<td>AI</td>
+<td>CN</td>
+<td class="Br">Break</td>
+<td>TOC</td>
+<td>SEPM</td>
+<td class="Lun">Lunch</td>
+<td colspan="2" class="lab">cnlab_b3/weblab_b1</td>                
+</tr>
+<tr>
+<td>Saturday</td>
+<td colspan="2">SEC</td>
+<td class="Br">Break</td>
+<td>CN</td>
+<td>TOC</td>
+<td class="Lun">Lunch</td>
+<td colspan="2">Mini-Project</td>       
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="9">End of Time Table</td>
+</tr>
+</tfoot>
+</table>
+</body>
+</html>
